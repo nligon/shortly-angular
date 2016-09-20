@@ -25,12 +25,12 @@ describe('LinksController', function () {
 
   }));
 
-  it('should have a data property on the $scope', function () {
+  xit('should have a data property on the $scope', function () {
     createController();
     expect($scope.data).to.be.an('object');
   });
 
-  it('should call `Links.getAll()` when controller is loaded', function () {
+  xit('should call `Links.getAll()` when controller is loaded', function () {
     sinon.spy(Links, 'getAll');
     $httpBackend.expectGET('/api/links').respond(200);
 
@@ -41,7 +41,7 @@ describe('LinksController', function () {
     Links.getAll.restore();
   });
 
-  it('should populate the data property after the call to `Links.getAll()`', function () {
+  xit('should populate the data property after the call to `Links.getAll()`', function () {
     var mockLinks = [{}, {}, {}];
     $httpBackend.expectGET('/api/links').respond(mockLinks);
 
